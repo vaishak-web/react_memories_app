@@ -1,6 +1,4 @@
 // eslint-disable-next-line
-import Posts from "../components/Posts/Posts";
-// eslint-disable-next-line
 export default (posts = [], action) => {
   switch (action.type) {
     case "FETCH_ALL":
