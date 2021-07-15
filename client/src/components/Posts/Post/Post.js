@@ -44,7 +44,7 @@ const Post = ({post, setCurrentId}) => {
                 </Button>
             </CardActions>
         </Card>
-    )
+    ) 
 }
 
 export default Post
