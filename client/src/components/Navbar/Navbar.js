@@ -20,6 +20,7 @@ const Navbar = () => {
       if(decodedToken.exp * 1000 < new Date().getTime()) logout();
     }
     setUser(JSON.parse(localStorage.getItem('profile')));
+    // eslint-disable-next-line
   },[location]);
 
   const logout = () => {
@@ -31,12 +32,12 @@ const Navbar = () => {
     <AppBar className={classes.appBar} position="static" color="inherit">
       <div className={classes.brandContainer}>
         <Typography component={Link} to="/" className={classes.heading} varient="h2" align="center">
-          Memories
+          Share Your Blogs
         </Typography>
         <img
           className={classes.image}
           src={memories}
-          alt="memories"
+          alt="Blogs"
           height="60"
         />
       </div>

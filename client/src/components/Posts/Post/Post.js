@@ -1,5 +1,5 @@
 import React from 'react'
-import{Card, CardActions, CardContent, CardMedia, Button, Typography} from '@material-ui/core';
+import{Card, CardActions, CardContent, CardMedia, Button, Typography, Link} from '@material-ui/core';
 import ThumbUpAltIcon from '@material-ui/icons/ThumbUpAlt';
 import ThumbUpAltOutlined from '@material-ui/icons/ThumbUpAltOutlined';
 import DeleteIcon from '@material-ui/icons/Delete';
@@ -45,9 +45,11 @@ const Post = ({post, setCurrentId}) => {
             <div className={classes.details}>
                 <Typography variant="body2" color="textSecondary">{post.tags.map((tag) =>`#${tag} `)}</Typography>
             </div>
-            <Typography className={classes.title} variant="h5" gutterBottom>{post.title}</Typography>
+            <Typography className={classes.title} variant="h6" gutterBottom>
+            <Link href={post.message} target="_blank" className={classes.link_default}>{post.title}</Link>
+            </Typography>
             <CardContent>
-                <Typography variant="body2" color="textSecondary" component="p">{post.message}</Typography>
+                <Typography variant="body2" color="textSecondary" component="p"><Link href={post.message} color="textSecondary" target="_blank" className={classes.link_default}>{post.message}</Link></Typography>
             </CardContent>
             <CardActions className={classes.cardActions}>
                 <Button color='primary' size="small" disabled={!user?.result} onClick={() => dispatch(likePost(post._id))}>
