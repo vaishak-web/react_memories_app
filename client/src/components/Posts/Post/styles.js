@@ -49,10 +49,8 @@ export default makeStyles({
     display: 'flex',
     justifyContent: 'space-between',
   },
-  link_default: {
-    textDecoration: 'none',
-    '&:hover': {
-      textDecoration: 'none',
-   },
+  cardAction: {
+    display: 'block',
+    textAlign: 'initial',
   },
 });
