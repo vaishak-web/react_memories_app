@@ -46,10 +46,14 @@ const Post = ({post, setCurrentId}) => {
                 <Typography variant="body2" color="textSecondary">{post.tags.map((tag) =>`#${tag} `)}</Typography>
             </div>
             <Typography className={classes.title} variant="h6" gutterBottom>
-            <Link href={post.message} target="_blank" className={classes.link_default}>{post.title}</Link>
+            {/* <Link href={post.message} target="_blank" className={classes.link_default}>{post.title}</Link> */}
+            {post.title}
             </Typography>
             <CardContent>
-                <Typography variant="body2" color="textSecondary" component="p"><Link href={post.message} color="textSecondary" target="_blank" className={classes.link_default}>{post.message}</Link></Typography>
+                <Typography variant="body2" color="textSecondary" component="p">
+                    {/* <Link href={post.message} color="textSecondary" target="_blank" className={classes.link_default}>{post.message}</Link> */}
+                    {post.message}
+                </Typography>
             </CardContent>
             <CardActions className={classes.cardActions}>
                 <Button color='primary' size="small" disabled={!user?.result} onClick={() => dispatch(likePost(post._id))}>
