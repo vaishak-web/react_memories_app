@@ -30,9 +30,9 @@ const Home = () => {
     }, [currentId, dispatch]);
 
     const searchPost = () =>{
-      if(search.trim()){
-        dispatch(getPosts({search, tags: tags.join(",")}));
-
+      if(search.trim() || tags){
+        dispatch(getPostsBySearch({search, tags: tags.join(",")}));
+        history.push(`/posts/search?searchQuery=${search || 'none'}&tags=${tags.join(',')}`);
         //
       }else{
         history.push('/');
@@ -47,7 +47,7 @@ const Home = () => {
     };
 
 
-    const handleAdd = (tag) => setTags([...tags], tag);
+    const handleAdd = (tag) => setTags([...tags, tag]);
 
 
     const handleDelete = (tagToDelete) => setTags(tags.filter((tag) => tag !== tagToDelete));
