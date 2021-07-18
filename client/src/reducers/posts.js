@@ -4,9 +4,9 @@ import {CREATE, UPDATE, DELETE, FETCH_ALL, LIKE, FETCH_BY_SEARCH, START_LOADING,
 export default (state = {isLoading:true, posts:[]}, action) => {
   switch (action.type) {
     case START_LOADING:
-      return [...state, isLoading.true];
+      return {...state, isLoading:true};
     case END_LOADING:
-        return [...state, isLoading.false];
+        return {...state, isLoading:false};
     case FETCH_ALL:
       return {
         ...state,
@@ -22,18 +22,21 @@ export default (state = {isLoading:true, posts:[]}, action) => {
         
         };
     case CREATE:
-      return [...state, action.payload];
+      return {
+        ...state,
+        posts: [...state.posts, action.payload],
+      };
     case UPDATE:
     case LIKE:
       return {
         ...state,
-        posts: state.map((post) => post._id === action.payload._id ? action.payload : post),
+        posts: state.posts.map((post) => post._id === action.payload._id ? action.payload : post),
       
       };
     case DELETE:
       return {
         ...state,
-        posts: state.filter((post) => post._id !== action.payload),
+        posts: state.posts.filter((post) => post._id !== action.payload),
       
       };
     default:
