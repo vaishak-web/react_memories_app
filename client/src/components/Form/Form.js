@@ -8,7 +8,7 @@ import { createPost, updatePost } from "../../actions/posts";
 
 const Form = ({currentId, setCurrentId}) => {
   const [postData, setPostData] = useState({title: "",  message: "",  tags: "",  selectedFile: ""});
-  const post = useSelector((state) => currentId ? state.posts.find((p) => p._id === currentId) : null);
+  const post = useSelector((state) => currentId ? state.posts.posts.find((p) => p._id === currentId) : null);
   const classes = useStyles();
   const dispatch = useDispatch();
 
@@ -42,7 +42,7 @@ const Form = ({currentId, setCurrentId}) => {
     )
   }
   return (
-    <Paper className={classes.paper}>
+    <Paper className={classes.paper} elevation={6}>
       <form className={`${classes.root} ${classes.form}`} autoComplete="off" noValidate onSubmit={handleSubmit}
       >
         <Typography variant="h6">{currentId ? 'Editing' : 'Creating'} a Memory</Typography>

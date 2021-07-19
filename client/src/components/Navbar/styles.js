@@ -22,7 +22,7 @@ export default makeStyles((theme) => ({
   },
   image: {
     marginLeft: '10px',
-    marginTop: '5px',
+    marginBottom: '5px',
   },
   toolbar: {
     display: 'flex',
@@ -50,6 +50,9 @@ export default makeStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     textAlign: 'center',
+    [theme.breakpoints.down('sm')]: {
+      display: 'none',
+    },
   },
   brandContainer: {
     display: 'flex',

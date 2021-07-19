@@ -50,7 +50,7 @@ const Home = () => {
 
   return (
     <Grow in>
-      <Container maxWidth="xl">
+      <Container  className={classes.appContainer}>
         <Grid
           className={classes.gridContainer}
           container

@@ -15,12 +15,15 @@ export default makeStyles((theme) => ({
   image: {
     marginLeft: '15px',
   },
-  appContainer: {
-    padding: '0px 0px',
-  },
   [theme.breakpoints.down('sm')]:{
     mainContainer:{
       flexDirection:"column-reverse"
     }
-  }
+  },
+
+  appContainer: {
+    [theme.breakpoints.up('md')]: {
+      maxWidth: '100%',
+    },
+  },
 }));
