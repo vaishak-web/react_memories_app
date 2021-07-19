@@ -17,7 +17,7 @@ const PostDetails = () => {
         dispatch(getPost(id));
     }, [id]);
 
-    console.log("Post Details");
+    // console.log("Post Details");
     if(!post) return null;
 
     if (isLoading){

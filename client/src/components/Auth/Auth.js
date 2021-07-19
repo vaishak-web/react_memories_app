@@ -26,7 +26,7 @@ const Auth = () => {
         }else{
             dispatch(signin(formData, history));
         }
-        console.log(formData);
+        // console.log(formData);
     };
     const handleChange = (e) =>{
         setFormData({...formData, [e.target.name]: e.target.value});
@@ -51,7 +51,7 @@ const Auth = () => {
         }catch(error){
             console.log(error);
         }
-        console.log(res);
+        // console.log(res);
     }
     return (
         <Container component="main" maxWidth="xs">

@@ -10,7 +10,7 @@ const Posts = ({setCurrentId}) => {
     // eslint-disable-next-line
     const classes = useStyles();
 
-    console.log(posts);
+    // console.log(posts);
     if(!posts.length && !isLoading) return "No Posts";
 
     return (

@@ -20,7 +20,6 @@ export default makeStyles((theme) => ({
       flexDirection:"column-reverse"
     }
   },
-
   appContainer: {
     [theme.breakpoints.up('md')]: {
       maxWidth: '100%',
