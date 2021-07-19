@@ -36,4 +36,15 @@ export default makeStyles((theme) => ({
   loadingPaper: {
     display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '20px', borderRadius: '15px', height: '39vh',
   },
+  cardAction: {
+    display: 'block',
+    textAlign: 'initial',
+  },
+  link_default: {
+    textDecoration: 'none',
+    '&:hover': {
+      textDecoration: 'none',
+   },}
+
+
 }));

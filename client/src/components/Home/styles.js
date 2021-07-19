@@ -17,6 +17,14 @@ export default makeStyles((theme) => ({
       flexDirection: 'column-reverse',
     },
   },
+  paginationMobile: {
+    [theme.breakpoints.down('xs')]: {
+      display: 'block',
+    },
+    [theme.breakpoints.up('sm')]: {
+      display: 'none',
+    },
+  },
   appContainer: {
     [theme.breakpoints.up('md')]: {
       maxWidth: '100%',

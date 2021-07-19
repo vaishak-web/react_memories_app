@@ -58,6 +58,13 @@ const Home = () => {
           alignItems="stretch"
           spacing={3}
         >
+           <Grid item xs={12} sm={6} md={3} className={classes.paginationMobile} >
+            {(!searchQuery && !tags.length) && (
+              <Paper elevation={6} className={classes.pagination}>
+                <Pagination page={page} />
+              </Paper>  
+            )}
+          </Grid>
           <Grid item xs={12} sm={6} md={9}>
             <Posts setCurrentId={setCurrentId} />
           </Grid>
