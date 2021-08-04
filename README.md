@@ -1,2 +1,2 @@
-# react_memories_app
-Click here 👉 https://childhood-memories.netlify.app/
+# react_memories_app to Developers blog share
+Click here 👉 https://share-your-blogs.netlify.app/posts
